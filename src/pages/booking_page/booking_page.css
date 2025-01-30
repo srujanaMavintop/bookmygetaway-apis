@@ -1,0 +1,32 @@
+.entire-page {
+  background-image: url("../../pics/back.jpg");  /* Path to your image */
+  background-size: cover;  /* Ensures the image covers the entire page */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-container {
+  display: flex;
+  flex-grow: 1;  /* Allows content to expand properly */
+  padding: 20px;
+  /* backdrop-filter: blur(5px); Optional: Adds a blur effect over the image */
+}
+
+.left {
+  width: 40%;
+  padding: 20px;
+}
+
+.right {
+  width: 60%;
+  padding: 20px;
+}
+
+/* Ensures Footer is positioned properly */
+.footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}

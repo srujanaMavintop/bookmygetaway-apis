@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Login Page | Adventure Awaits</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up">
+            <form action="/signup" method="POST">
+                <h1>Adventure Awaits!</h1>
+                <div class="social-icons">
+                    <a href="http://localhost:3000/auth/google" class="icon">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                </div>
+                <span>Plan your trips, manage bookings, and explore destinations!</span>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Create a Password" required>
+                <input type="tel" name="phone_no" placeholder="Phone Number" pattern="[0-9]{10}" title="Enter a valid phone number (1234567890)" required>
+                <button type="submit">Start Your Adventure</button>
+            </form>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container sign-in">
+            <form action="/signin" method="POST">
+                <h1>Welcome Back, Traveler!</h1>
+                <div class="social-icons">
+                    <a href="http://localhost:3000/auth/google" class="icon"><i class="fa-brands fa-google"></i></a>
+                </div>
+                <span>Sign in to continue planning your dream trips and exploring destinations.</span>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Enter your Password" required>
+                <input type="tel" name="phone_no" placeholder="Phone Number" pattern="[0-9]{10}" title="Enter a valid phone number (1234567890)" required>
+                <a href="#">Forgot Your Password?</a>
+                <button type="submit">Continue Your Journey</button>
+            </form>
+        </div>
+
+        <!-- Toggle Panels -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back, Traveler!</h1>
+                    <p>Sign in to continue planning your dream trips and exploring destinations.</p>
+                    <button id="login">Continue Your Journey</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Adventure Awaits!</h1>
+                    <p>Join us to unlock the best travel deals and personalized itineraries.</p>
+                    <button id="register">Start Your Adventure</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

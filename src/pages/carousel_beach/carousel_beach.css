@@ -1,0 +1,48 @@
+/* Move Carousel Navigation Buttons Down */
+.carousel-control-prev,
+.carousel-control-next {
+  bottom: -30px; /* Moves buttons downward */
+  top: auto; /* Reset top positioning */
+  transform: translateY(0);
+}
+
+/* Add Space Below the Carousel */
+.carousel {
+  margin-bottom: 40px; /* Adds spacing below the carousel */
+}
+
+/* Adjust "Places To Visit" Text Box */
+.carousel-caption {
+  bottom: 20px; /* Moves text lower */
+  background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+/* Ensure the Image Fits Properly */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Ensure the Navigation Dots Are Well-Spaced */
+.carousel-indicators {
+  bottom: -15px; /* Move indicators (dots) slightly lower */
+}
+
+/* Improve Button Visibility */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for contrast */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Fix Overall Page Layout */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,86 @@
+.hotels-container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .hotel-card {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 15px;
+  }
+  
+  .hotel-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hotel-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .hotel-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hotel-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .hotel-location,
+  .hotel-description {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+  }
+  
+  .hotel-card-footer {
+    display: flex;
+    flex-direction: column; /* Vertically align elements */
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .hotel-rating {
+    font-size: 14px;
+    color: #ff9900; /* Gold color for star rating */
+    font-weight: bold;
+  }
+  
+  .hotel-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003366; /* Dark blue for price */
+  }
+  
+  .book-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Button pop effect */
+  }

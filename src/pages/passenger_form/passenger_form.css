@@ -1,0 +1,86 @@
+.passenger-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;  /* Ensure minimum full viewport height */
+    padding-bottom: 60px; /* Prevent overlap with footer */
+  }
+  
+  .passenger-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px; /* Space before footer */
+  }
+  
+  .passenger-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+
+  
+.passenger-form {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    background: #ffffffed;
+    color: rgb(0, 0, 0);
+  }
+  
+  .passenger-form h2{
+    color: black;
+  }
+  .passenger-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .passenger-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .passenger-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #c13709ae;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .passenger-form label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .passenger-form input,
+  .passenger-form select {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .passenger-form button {
+    margin-top: 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

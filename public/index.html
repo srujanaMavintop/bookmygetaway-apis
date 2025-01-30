@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure JS App</title>
+    
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="application/javascript">
+      // JavaScript to render content directly into the 'root' div
+
+      // Create a new element, in this case a simple heading
+      const heading = document.createElement('h1');
+      heading.textContent = '';
+
+      // Select the 'root' div and append the heading
+      const root = document.getElementById('root');
+      root.appendChild(heading);
+    </script>
+  </body>
+</html>

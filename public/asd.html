@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .carousel-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .carousel-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    .carousel-content h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .carousel-content h4 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .carousel-content p {
+      font-size: 1rem;
+    }
+
+    .weather-info {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-button {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .carousel-button:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500?text=Himachal+Pradesh');">
+        <div class="carousel-content">
+          <h2>Himachal Pradesh</h2>
+          <h4>North India, India</h4>
+          <p>Himachal Pradesh is known for its stunning mountain landscapes and is a popular destination for trekking and adventure sports.</p>
+          <div class="weather-info">
+            <span>-10&deg;C</span>
+            <span>AQI 178</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500?text=Kerala');">
+        <div class="carousel-content">
+          <h2>Kerala</h2>
+          <h4>South India, India</h4>
+          <p>Kerala is famous for its serene backwaters, lush greenery, and rich cultural heritage.</p>
+          <div class="weather-info">
+            <span>25&deg;C</span>
+            <span>AQI 50</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500?text=Rajasthan');">
+        <div class="carousel-content">
+          <h2>Rajasthan</h2>
+          <h4>West India, India</h4>
+          <p>Rajasthan is known for its desert landscapes, historic forts, and vibrant culture.</p>
+          <div class="weather-info">
+            <span>35&deg;C</span>
+            <span>AQI 200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" id="prev">&#10094;</button>
+      <button class="carousel-button" id="next">&#10095;</button>
+    </div>
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </div>
+
+  <script>
+    const slide = document.querySelector('.carousel-slide');
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
+    }
+
+    prev.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+      updateCarousel();
+    });
+
+    next.addEventListener('click', () => {
+      currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        currentIndex = parseInt(e.target.dataset.index);
+        updateCarousel();
+      });
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    }, 5000);
+  </script>
+</body>
+</html>

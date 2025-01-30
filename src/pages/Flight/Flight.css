@@ -1,0 +1,103 @@
+.flight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .flight-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .flight-card:hover {
+    transform: scale(1.02); /* Slight pop effect */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .flight-card-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .airline-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .flight-card-middle {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .airline-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .route,
+  .class {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  /* Centering timing horizontally */
+  .flight-card-right {
+    flex: 2;
+    text-align: center;
+  }
+  
+  .timing {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    gap: 10px;
+  }
+  
+  .departure-time,
+  .arrival-time {
+    color: #003366;
+  }
+  
+  .arrow {
+    font-size: 14px;
+    color: red;
+  }
+  
+  .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .fees {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .book-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slight button pop effect */
+  } 

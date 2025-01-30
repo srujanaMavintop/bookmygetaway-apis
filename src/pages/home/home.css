@@ -1,0 +1,16 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.home-container {
+    background-image: url('./homepage.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    min-height: 100vh; /* Makes sure the background covers the full screen */
+    width: 100%; /* Covers the full width */
+  }
+  

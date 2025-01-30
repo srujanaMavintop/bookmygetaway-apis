@@ -1,0 +1,56 @@
+{
+  "name": "vite",
+  "private": "true",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.1.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "razorpay": "^2.9.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-router-dom": "^7.1.0",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "webpack-cli": "^6.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
